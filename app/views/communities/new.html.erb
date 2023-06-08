@@ -1,0 +1,16 @@
+<%= form_with(model: @community, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= form.label :profile %>
+    <%= form.text_area :profile %>
+  </div>
+  
+  <%= hidden_field_tag 'user[id]', current_user.id %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
